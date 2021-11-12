@@ -85,7 +85,8 @@ app.delete("/:id_user", (request, response) => {
     users.destroy({where: parameter})
     .then(result => {
         return response.json({
-            message: `Data berhasil dihapus`
+            message: `Data berhasil dihapus`,
+            data: result
         })
     })
     .catch(error => {
