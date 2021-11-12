@@ -36,7 +36,8 @@ app.post("/", (request, response) => {
     member.create(newMember)
     .then(result => {
         response.json({
-            message: `Data berhasil ditambahkan`
+            message: `Data berhasil ditambahkan`,
+            data: result
         })
     })
     .catch(error => {
