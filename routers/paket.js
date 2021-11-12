@@ -35,7 +35,7 @@ app.post("/", (request, response) => {
     .then(result => {
         response.json({
             message: `Data berhasil ditambahkan`,
-            result: data
+            data: result
         })
     })
     .catch(error => {
@@ -61,7 +61,7 @@ app.put("/:id_paket", (request, response) => {
     paket.update(data, {where: parameter})
     .then(result => {
         return response.json({
-            message: `Data berhasil ditambahkan`,
+            message: `Data berhasil diubah`,
             data: result
         })
     })
