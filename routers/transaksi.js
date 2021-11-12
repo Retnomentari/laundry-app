@@ -212,5 +212,3 @@ app.get("/bayar/:id_transaksi", (request, response)=> {
 })
 
 module.exports = app
-
-
